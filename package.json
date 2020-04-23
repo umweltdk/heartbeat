@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Heartbeat module by Umwelt",
   "main": "index.js",
+  "repository": "github:umweltdk/heartbeat",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
