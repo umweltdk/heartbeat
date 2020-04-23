@@ -1,6 +1,6 @@
 {
   "name": "@umweltdk/heartbeat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Heartbeat module by Umwelt",
   "main": "index.js",
   "repository": "github:umweltdk/heartbeat",
