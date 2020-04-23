@@ -1,4 +1,5 @@
-const { CronJob } = require('cron');
+import { CronJob } from 'cron';
+import { isValidCron } from 'cron-validator';
 
 export class Heartbeat {
 	private isCron: boolean;
@@ -14,6 +15,11 @@ export class Heartbeat {
 		this.callback = callback ? callback : this.noop;
 
 		if (typeof intervalDefinition === 'string') {
+
+			if (!isValidCron(intervalDefinition, { seconds: true })) {
+				throw new Error('intervalDefinition is not a valid cron string!')
+			}
+
 			this.isCron = true;
 			this.cronJob = new CronJob(intervalDefinition, this.callback);
 		} else {
@@ -48,5 +54,5 @@ export class Heartbeat {
 		}
 	}
 
-	private noop() {};
+	private noop() { };
 }
