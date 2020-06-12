@@ -5,6 +5,9 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": "github:umweltdk/heartbeat",
+  "engines": {
+    "node": ">=12.18.0"
+  },
   "scripts": {
     "build": "tsc",
     "prepare": "tsc",
